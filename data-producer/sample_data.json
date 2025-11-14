@@ -1,0 +1,53 @@
+{
+  "user_action_example": {
+    "timestamp": "2024-01-15T10:30:00.000Z",
+    "event_type": "user_action",
+    "event_id": "550e8400-e29b-41d4-a716-446655440000",
+    "data": {
+      "user_id": "user_1234",
+      "action": "purchase",
+      "page": "/products/123",
+      "session_duration": 450,
+      "device": "mobile",
+      "browser": "chrome"
+    }
+  },
+  "transaction_example": {
+    "timestamp": "2024-01-15T10:31:00.000Z",
+    "event_type": "transaction",
+    "event_id": "550e8400-e29b-41d4-a716-446655440001",
+    "data": {
+      "transaction_id": "txn_abc123",
+      "user_id": "user_5678",
+      "type": "payment",
+      "amount": 99.99,
+      "currency": "USD",
+      "status": "completed",
+      "merchant": "merchant_42"
+    }
+  },
+  "metric_example": {
+    "timestamp": "2024-01-15T10:32:00.000Z",
+    "event_type": "metric",
+    "event_id": "550e8400-e29b-41d4-a716-446655440002",
+    "data": {
+      "metric_name": "cpu_usage",
+      "value": 75.5,
+      "unit": "percent",
+      "host": "host-10",
+      "region": "us-east-1"
+    }
+  },
+  "system_event_example": {
+    "timestamp": "2024-01-15T10:33:00.000Z",
+    "event_type": "system_event",
+    "event_id": "550e8400-e29b-41d4-a716-446655440003",
+    "data": {
+      "event_name": "error",
+      "service": "api",
+      "message": "Connection timeout",
+      "severity": "high",
+      "host": "host-25"
+    }
+  }
+}

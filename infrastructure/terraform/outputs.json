@@ -1,0 +1,108 @@
+{
+  "aws_region": {
+    "sensitive": false,
+    "type": "string",
+    "value": "us-east-1"
+  },
+  "deployment_summary": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "environment": "string",
+        "kinesis_stream": "string",
+        "lambda_processor": "string",
+        "lambda_transformer": "string",
+        "metadata_table": "string",
+        "processed_bucket": "string",
+        "raw_bucket": "string",
+        "region": "string"
+      }
+    ],
+    "value": {
+      "environment": "dev",
+      "kinesis_stream": "event-driven-pipeline-stream-dev",
+      "lambda_processor": "event-driven-pipeline-kinesis-processor-dev",
+      "lambda_transformer": "event-driven-pipeline-s3-transformer-dev",
+      "metadata_table": "event-driven-pipeline-metadata-dev",
+      "processed_bucket": "event-driven-pipeline-processed-dev-211125312702",
+      "raw_bucket": "event-driven-pipeline-raw-dev-211125312702",
+      "region": "us-east-1"
+    }
+  },
+  "environment": {
+    "sensitive": false,
+    "type": "string",
+    "value": "dev"
+  },
+  "kinesis_processor_dlq_url": {
+    "sensitive": false,
+    "type": "string",
+    "value": "https://sqs.us-east-1.amazonaws.com/211125312702/event-driven-pipeline-kinesis-processor-dev-dlq"
+  },
+  "kinesis_processor_function_arn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "arn:aws:lambda:us-east-1:211125312702:function:event-driven-pipeline-kinesis-processor-dev"
+  },
+  "kinesis_processor_function_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "event-driven-pipeline-kinesis-processor-dev"
+  },
+  "kinesis_stream_arn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "arn:aws:kinesis:us-east-1:211125312702:stream/event-driven-pipeline-stream-dev"
+  },
+  "kinesis_stream_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "event-driven-pipeline-stream-dev"
+  },
+  "metadata_table_arn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "arn:aws:dynamodb:us-east-1:211125312702:table/event-driven-pipeline-metadata-dev"
+  },
+  "metadata_table_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "event-driven-pipeline-metadata-dev"
+  },
+  "processed_bucket_arn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "arn:aws:s3:::event-driven-pipeline-processed-dev-211125312702"
+  },
+  "processed_bucket_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "event-driven-pipeline-processed-dev-211125312702"
+  },
+  "raw_bucket_arn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "arn:aws:s3:::event-driven-pipeline-raw-dev-211125312702"
+  },
+  "raw_bucket_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "event-driven-pipeline-raw-dev-211125312702"
+  },
+  "s3_transformer_dlq_url": {
+    "sensitive": false,
+    "type": "string",
+    "value": "https://sqs.us-east-1.amazonaws.com/211125312702/event-driven-pipeline-s3-transformer-dev-dlq"
+  },
+  "s3_transformer_function_arn": {
+    "sensitive": false,
+    "type": "string",
+    "value": "arn:aws:lambda:us-east-1:211125312702:function:event-driven-pipeline-s3-transformer-dev"
+  },
+  "s3_transformer_function_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "event-driven-pipeline-s3-transformer-dev"
+  }
+}

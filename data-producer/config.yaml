@@ -1,0 +1,24 @@
+# Kinesis Data Producer Configuration
+
+aws:
+  region: us-east-1
+
+kinesis:
+  stream_name: event-driven-pipeline-stream-dev
+  # Get this from Terraform output after deployment
+
+producer:
+  rate: 10              # Records per second
+  duration: 60          # Duration in seconds
+  batch_size: 10        # Number of records per batch
+  
+  # Event distribution (optional)
+  event_distribution:
+    user_action: 0.4    # 40%
+    transaction: 0.3    # 30%
+    metric: 0.2         # 20%
+    system_event: 0.1   # 10%
+
+logging:
+  level: INFO           # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
